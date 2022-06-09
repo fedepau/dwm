@@ -1,10 +1,29 @@
 --- dwm.c
 +++ dwm.c
-@@ -211,6 +213,7 @@ static void sigchld(int unused);
- static void spawn(const Arg *arg);
- static void tag(const Arg *arg);
- static void tagmon(const Arg *arg);
-+static void tagnthmon(const Arg *arg);
- static void tile(Monitor *);
- static void togglebar(const Arg *arg);
- static void togglefloating(const Arg *arg);
+@@ -2020,7 +2140,25 @@ updategeom(void)
+ 					m->clients = c->next;
+ 					detachstack(c);
+ 					c->mon = mons;
+-					attach(c);
++					switch(attachdirection){
++					case 1:
++						attachabove(c);
++						break;
++					case 2:
++						attachaside(c);
++						break;
++					case 3:
++						attachbelow(c);
++						break;
++					case 4:
++						attachbottom(c);
++						break;
++					case 5:
++						attachtop(c);
++						break;
++					default:
++						attach(c);
++					}
+ 					attachstack(c);
+ 				}
+ 				if (m == selmon)
