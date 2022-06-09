@@ -60,6 +60,7 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 
 #define FORCE_VSPLIT 1  /* nrowgrid layout: force two clients to always split vertically */
 #include "vanitygaps.c"
+#include <X11/XF86keysym.h>
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
@@ -102,6 +103,14 @@ static const char *termcmd[]  = { "st", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
+	{ 0, XF86XK_AudioMicMute,                  spawn,          SHCMD("pactl set-source-mute @DEFAULT_SOURCE@ toggle; kill -44 $(pidof dwmblocks)") },
+	{ 0, XF86XK_AudioLowerVolume,              spawn,          SHCMD("pactl set-sink-mute @DEFAULT_SINK@ false ; pactl set-sink-volume @DEFAULT_SINK@ -5%; kill -44 $(pidof dwmblocks)") },
+	{ 0, XF86XK_AudioMute,                     spawn,          SHCMD("pactl set-sink-mute @DEFAULT_SINK@ toggle; kill -44 $(pidof dwmblocks)") },
+	{ 0, XF86XK_AudioRaiseVolume,              spawn,          SHCMD("pactl set-sink-mute @DEFAULT_SINK@ false ; pactl set-sink-volume @DEFAULT_SINK@ +5%; kill -44 $(pidof dwmblocks)") },
+	{ 0, XF86XK_MonBrightnessUp,               spawn,          SHCMD("xbacklight -inc 5; kill -44 $(pidof dwmblocks)") },
+	{ 0, XF86XK_MonBrightnessDown,             spawn,          SHCMD("xbacklight -dec 5; kill -44 $(pidof dwmblocks)") },
+	{ 0, XF86XK_ScreenSaver,                   spawn,          SHCMD("slock") },
+	{ 0, XF86XK_WebCam,                        spawn,          SHCMD("sudo rfkill toggle bluetooth") },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
