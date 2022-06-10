@@ -1,34 +1,34 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
-static const unsigned int snap      = 32;       /* snap pixel */
-static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
-static const unsigned int gappih    = 3;        /* horiz inner gap between windows */
-static const unsigned int gappiv    = 3;        /* vert inner gap between windows */
-static const unsigned int gappoh    = 3;        /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov    = 3;        /* vert outer gap between windows and screen edge */
-static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
-static const int showbar            = 1;        /* 0 means no bar */
-static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10" };
-static const char dmenufont[]       = "monospace:size=10";
-static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#005577";
-static const unsigned int baralpha = 0xd0;
+static const unsigned int borderpx    = 1;        /* border pixel of windows */
+static const unsigned int snap        = 32;       /* snap pixel */
+static const int swallowfloating      = 0;        /* 1 means swallow floating windows by default */
+static const unsigned int gappih      = 3;        /* horiz inner gap between windows */
+static const unsigned int gappiv      = 3;        /* vert inner gap between windows */
+static const unsigned int gappoh      = 3;        /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov      = 3;        /* vert outer gap between windows and screen edge */
+static       int smartgaps            = 0;        /* 1 means no outer gap when there is only one window */
+static const int showbar              = 1;        /* 0 means no bar */
+static const int topbar               = 1;        /* 0 means bottom bar */
+static const char *fonts[]            = { "monospace:size=10" };
+static const char dmenufont[]         = "monospace:size=10";
+static const char col_gray1[]         = "#222222";
+static const char col_gray2[]         = "#444444";
+static const char col_gray3[]         = "#bbbbbb";
+static const char col_gray4[]         = "#eeeeee";
+static const char col_cyan[]          = "#005577";
+static const unsigned int baralpha    = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
-static const char *colors[][3]      = {
-	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
-	[SchemeStatus]  = { col_gray3, col_gray1,  "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
+static const char *colors[][3]        = {
+	/*                   fg         bg         border   */
+	[SchemeNorm]     = { col_gray3, col_gray1, col_gray2 },
+	[SchemeSel]      = { col_gray3, col_cyan,  col_cyan  },
+	[SchemeStatus]   = { col_gray3, col_gray1, "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
 	[SchemeTagsSel]  = { col_gray4, col_cyan,  "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
-    [SchemeTagsNorm]  = { col_gray3, col_gray1,  "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
+    [SchemeTagsNorm] = { col_gray3, col_gray1, "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
     [SchemeInfoSel]  = { col_gray4, col_cyan,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
-    [SchemeInfoNorm]  = { col_gray3, col_gray1,  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
+    [SchemeInfoNorm] = { col_gray3, col_gray1, "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
 static const unsigned int alphas[][3]      = {
 	/*               fg      bg        border     */
@@ -52,11 +52,11 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
-static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
-static const int nmaster     = 1;    /* number of clients in master area */
-static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
-static const int attachdirection = 1;    /* 0 default, 1 above, 2 aside, 3 below, 4 bottom, 5 top */
-static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
+static const float mfact         = 0.5; /* factor of master area size [0.05..0.95] */
+static const int nmaster         = 1;   /* number of clients in master area */
+static const int resizehints     = 1;   /* 1 means respect size hints in tiled resizals */
+static const int attachdirection = 1;   /* 0 default, 1 above, 2 aside, 3 below, 4 bottom, 5 top */
+static const int lockfullscreen  = 1;   /* 1 will force focus on the fullscreen window */
 
 #define FORCE_VSPLIT 1  /* nrowgrid layout: force two clients to always split vertically */
 #include "vanitygaps.c"
@@ -111,8 +111,8 @@ static Key keys[] = {
 	{ 0, XF86XK_MonBrightnessDown,             spawn,          SHCMD("xbacklight -dec 5; kill -44 $(pidof dwmblocks)") },
 	{ 0, XF86XK_ScreenSaver,                   spawn,          SHCMD("slock") },
 	{ 0, XF86XK_WebCam,                        spawn,          SHCMD("sudo rfkill toggle bluetooth") },
-	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
+    { MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
