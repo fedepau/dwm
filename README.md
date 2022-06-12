@@ -9,6 +9,7 @@
 - [pertag](https://dwm.suckless.org/patches/pertag/)
 - [swallow](https://dwm.suckless.org/patches/swallow/)
 - [vanitygaps](https://dwm.suckless.org/patches/vanitygaps/)
+- [xresources](https://dwm.suckless.org/patches/xresources/)
 
 ## Requirements:
 Xlib header files. On Arch-based systems:
