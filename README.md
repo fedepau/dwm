@@ -2,7 +2,6 @@
 
 ## Applied patches:
 - [accessnthmonitor](https://dwm.suckless.org/patches/accessnthmonitor/)
-- [alpha](https://dwm.suckless.org/patches/alpha/)
 - [attachdirection](https://dwm.suckless.org/patches/attachdirection/)
 - [colorbar](https://dwm.suckless.org/patches/colorbar/)
 - [cyclelayouts](https://dwm.suckless.org/patches/cyclelayouts/)
