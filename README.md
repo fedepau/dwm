@@ -5,6 +5,7 @@
 - [attachdirection](https://dwm.suckless.org/patches/attachdirection/)
 - [colorbar](https://dwm.suckless.org/patches/colorbar/)
 - [cyclelayouts](https://dwm.suckless.org/patches/cyclelayouts/)
+- [hide vacant tags](https://dwm.suckless.org/patches/hide_vacant_tags/)
 - [pertag](https://dwm.suckless.org/patches/pertag/)
 - [swallow](https://dwm.suckless.org/patches/swallow/)
 - [vanitygaps](https://dwm.suckless.org/patches/vanitygaps/)
