@@ -10,7 +10,6 @@
 - [hide vacant tags](https://dwm.suckless.org/patches/hide_vacant_tags/)
 - [movestack](https://dwm.suckless.org/patches/movestack/)
 - [pertag](https://dwm.suckless.org/patches/pertag/)
-- [scratchpads](https://dwm.suckless.org/patches/scratchpads/)
 - [status2d](https://dwm.suckless.org/patches/status2d/)
 - [status2d-xrdb](https://dwm.suckless.org/patches/status2d/)
 - [statusallmons](https://dwm.suckless.org/patches/statusallmons/)
