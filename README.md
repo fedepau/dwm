@@ -12,6 +12,7 @@
 - [statusallmons](https://dwm.suckless.org/patches/statusallmons/)
 - [swallow](https://dwm.suckless.org/patches/swallow/)
 - [vanitygaps](https://dwm.suckless.org/patches/vanitygaps/)
+- [warp](https://dwm.suckless.org/patches/warp/)
 - [xrdb](https://dwm.suckless.org/patches/xrdb/)
 
 ## Requirements:
