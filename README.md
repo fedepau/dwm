@@ -11,6 +11,7 @@
 - [scratchpads](https://dwm.suckless.org/patches/scratchpads/)
 - [swallow](https://dwm.suckless.org/patches/swallow/)
 - [vanitygaps](https://dwm.suckless.org/patches/vanitygaps/)
+- [xrdb](https://dwm.suckless.org/patches/xrdb/)
 
 ## Requirements:
 Xlib header files. On Arch-based systems:
