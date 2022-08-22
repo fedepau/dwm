@@ -9,6 +9,7 @@
 - [hide vacant tags](https://dwm.suckless.org/patches/hide_vacant_tags/)
 - [pertag](https://dwm.suckless.org/patches/pertag/)
 - [scratchpads](https://dwm.suckless.org/patches/scratchpads/)
+- [statusallmons](https://dwm.suckless.org/patches/statusallmons/)
 - [swallow](https://dwm.suckless.org/patches/swallow/)
 - [vanitygaps](https://dwm.suckless.org/patches/vanitygaps/)
 - [xrdb](https://dwm.suckless.org/patches/xrdb/)
