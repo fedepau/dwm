@@ -14,6 +14,7 @@
 - [status2d](https://dwm.suckless.org/patches/status2d/)
 - [status2d-xrdb](https://dwm.suckless.org/patches/status2d/)
 - [statusallmons](https://dwm.suckless.org/patches/statusallmons/)
+- [statuscmd](https://dwm.suckless.org/patches/statuscmd/)
 - [swallow](https://dwm.suckless.org/patches/swallow/)
 - [vanitygaps](https://dwm.suckless.org/patches/vanitygaps/)
 - [warp](https://dwm.suckless.org/patches/warp/)
