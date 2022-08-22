@@ -10,6 +10,7 @@
 - [pertag](https://dwm.suckless.org/patches/pertag/)
 - [scratchpads](https://dwm.suckless.org/patches/scratchpads/)
 - [status2d](https://dwm.suckless.org/patches/status2d/)
+- [status2d-xrdb](https://dwm.suckless.org/patches/status2d/)
 - [statusallmons](https://dwm.suckless.org/patches/statusallmons/)
 - [swallow](https://dwm.suckless.org/patches/swallow/)
 - [vanitygaps](https://dwm.suckless.org/patches/vanitygaps/)
