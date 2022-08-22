@@ -2,13 +2,13 @@
 
 ## Applied patches:
 - [accessnthmonitor](https://dwm.suckless.org/patches/accessnthmonitor/)
-- [attachdirection](https://dwm.suckless.org/patches/attachdirection/)
-- [colorbar](https://dwm.suckless.org/patches/colorbar/)
+- [alwayscenter](https://dwm.suckless.org/patches/alwayscenter/)
 - [cyclelayouts](https://dwm.suckless.org/patches/cyclelayouts/)
 - [focusonnetactive](https://dwm.suckless.org/patches/focusonnetactive/)
 - [fullscreen](https://dwm.suckless.org/patches/fullscreen/)
 - [hide vacant tags](https://dwm.suckless.org/patches/hide_vacant_tags/)
 - [pertag](https://dwm.suckless.org/patches/pertag/)
+- [scratchpads](https://dwm.suckless.org/patches/scratchpads/)
 - [swallow](https://dwm.suckless.org/patches/swallow/)
 - [vanitygaps](https://dwm.suckless.org/patches/vanitygaps/)
 
