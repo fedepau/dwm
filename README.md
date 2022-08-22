@@ -3,6 +3,7 @@
 ## Applied patches:
 - [accessnthmonitor](https://dwm.suckless.org/patches/accessnthmonitor/)
 - [alwayscenter](https://dwm.suckless.org/patches/alwayscenter/)
+- [attachdirection](https://dwm.suckless.org/patches/attachdirection/)
 - [cyclelayouts](https://dwm.suckless.org/patches/cyclelayouts/)
 - [focusonnetactive](https://dwm.suckless.org/patches/focusonnetactive/)
 - [fullscreen](https://dwm.suckless.org/patches/fullscreen/)
