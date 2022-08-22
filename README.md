@@ -9,7 +9,6 @@
 - [fullscreen](https://dwm.suckless.org/patches/fullscreen/)
 - [hide vacant tags](https://dwm.suckless.org/patches/hide_vacant_tags/)
 - [pertag](https://dwm.suckless.org/patches/pertag/)
-- [statuscolor](https://dwm.suckless.org/patches/statuscolor/)
 - [swallow](https://dwm.suckless.org/patches/swallow/)
 - [vanitygaps](https://dwm.suckless.org/patches/vanitygaps/)
 
