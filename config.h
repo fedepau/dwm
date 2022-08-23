@@ -16,12 +16,12 @@
 #define NUMCOLORS 4
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
-static const unsigned int gappih    = 5;       /* horiz inner gap between windows */
-static const unsigned int gappiv    = 5;       /* vert inner gap between windows */
-static const unsigned int gappoh    = 5;       /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov    = 5;       /* vert outer gap between windows and screen edge */
+static const unsigned int gappih    = 4;       /* horiz inner gap between windows */
+static const unsigned int gappiv    = 4;       /* vert inner gap between windows */
+static const unsigned int gappoh    = 4;       /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov    = 4;       /* vert outer gap between windows and screen edge */
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
@@ -34,22 +34,22 @@ static char normfgcolor[]           = "#bbbbbb";
 static char selfgcolor[]            = "#eeeeee";
 static char selbordercolor[]        = "#005577";
 static char selbgcolor[]            = "#005577";
-static char termcol0[] = "#000000"; /* black   */
-static char termcol1[] = "#ff0000"; /* red     */
-static char termcol2[] = "#33ff00"; /* green   */
-static char termcol3[] = "#ff0099"; /* yellow  */
-static char termcol4[] = "#0066ff"; /* blue    */
-static char termcol5[] = "#cc00ff"; /* magenta */
-static char termcol6[] = "#00ffff"; /* cyan    */
-static char termcol7[] = "#d0d0d0"; /* white   */
-static char termcol8[]  = "#808080"; /* black   */
-static char termcol9[]  = "#ff0000"; /* red     */
-static char termcol10[] = "#33ff00"; /* green   */
-static char termcol11[] = "#ff0099"; /* yellow  */
-static char termcol12[] = "#0066ff"; /* blue    */
-static char termcol13[] = "#cc00ff"; /* magenta */
-static char termcol14[] = "#00ffff"; /* cyan    */
-static char termcol15[] = "#ffffff"; /* white   */
+static char termcol0[]  = "#282828"; /* black   */
+static char termcol1[]  = "#cc241d"; /* red     */
+static char termcol2[]  = "#98971a"; /* green   */
+static char termcol3[]  = "#d79921"; /* yellow  */
+static char termcol4[]  = "#458588"; /* blue    */
+static char termcol5[]  = "#b16286"; /* magenta */
+static char termcol6[]  = "#689d6a"; /* cyan    */
+static char termcol7[]  = "#a89984"; /* white   */
+static char termcol8[]  = "#928374"; /* black   */
+static char termcol9[]  = "#fb4934"; /* red     */
+static char termcol10[] = "#b8bb26"; /* green   */
+static char termcol11[] = "#fabd2f"; /* yellow  */
+static char termcol12[] = "#83a598"; /* blue    */
+static char termcol13[] = "#d3869b"; /* magenta */
+static char termcol14[] = "#8ec07c"; /* cyan    */
+static char termcol15[] = "#ebdbb2"; /* white   */
 static char *termcolor[] = {
   termcol0,
   termcol1,
@@ -99,6 +99,7 @@ static const int attachdirection = 4;    /* 0 default, 1 above, 2 aside, 3 below
 #define FORCE_VSPLIT 1  /* nrowgrid layout: force two clients to always split vertically */
 #include "vanitygaps.c"
 #include "movestack.c"
+#include <X11/XF86keysym.h>
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
@@ -171,7 +172,7 @@ static const Key keys[] = {
 	
     /* gaps */
 	{ MODKEY|Mod1Mask,              XK_0,      togglegaps,     {0} },
-	{ MODKEY|Mod1Mask|ShiftMask,    XK_0,      defaultgaps,    {0} },
+	{ MODKEY|ShiftMask,             XK_0,      defaultgaps,    {0} },
 /*  { MODKEY|Mod1Mask,              XK_u,      incrgaps,       {.i = +1 } }, */
 /*  { MODKEY|Mod1Mask|ShiftMask,    XK_u,      incrgaps,       {.i = -1 } }, */
 /*  { MODKEY|Mod1Mask,              XK_i,      incrigaps,      {.i = +1 } }, */
@@ -212,6 +213,16 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+
+    /* special buttons */
+    { 0, XF86XK_AudioMicMute,                  spawn,          SHCMD("pactl set-source-mute @DEFAULT_SOURCE@ toggle; kill -44 $(pidof dwmblocks)") },
+	{ 0, XF86XK_AudioLowerVolume,              spawn,          SHCMD("pactl set-sink-mute @DEFAULT_SINK@ false ; pactl set-sink-volume @DEFAULT_SINK@ -5%; kill -44 $(pidof dwmblocks)") },
+	{ 0, XF86XK_AudioMute,                     spawn,          SHCMD("pactl set-sink-mute @DEFAULT_SINK@ toggle; kill -44 $(pidof dwmblocks)") },
+	{ 0, XF86XK_AudioRaiseVolume,              spawn,          SHCMD("pactl set-sink-mute @DEFAULT_SINK@ false ; pactl set-sink-volume @DEFAULT_SINK@ +5%; kill -44 $(pidof dwmblocks)") },
+	{ 0, XF86XK_MonBrightnessUp,               spawn,          SHCMD("xbacklight -inc 5; kill -44 $(pidof dwmblocks)") },
+	{ 0, XF86XK_MonBrightnessDown,             spawn,          SHCMD("xbacklight -dec 5; kill -44 $(pidof dwmblocks)") },
+	{ 0, XF86XK_ScreenSaver,                   spawn,          SHCMD("slock") },
+	{ 0, XF86XK_WebCam,                        spawn,          SHCMD("sudo rfkill toggle bluetooth") },
 };
 
 /* button definitions */
