@@ -22,7 +22,7 @@ static const unsigned int gappih    = 4;       /* horiz inner gap between window
 static const unsigned int gappiv    = 4;       /* vert inner gap between windows */
 static const unsigned int gappoh    = 4;       /* horiz outer gap between windows and screen edge */
 static const unsigned int gappov    = 4;       /* vert outer gap between windows and screen edge */
-static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
+static int smartgaps                = 0;        /* 1 means no outer gap when there is only one window */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -50,6 +50,7 @@ static char termcol12[] = "#83a598"; /* blue    */
 static char termcol13[] = "#d3869b"; /* magenta */
 static char termcol14[] = "#8ec07c"; /* cyan    */
 static char termcol15[] = "#ebdbb2"; /* white   */
+static char termcol16[] = "#005577"; /* dwmblue */
 static char *termcolor[] = {
   termcol0,
   termcol1,
@@ -67,6 +68,7 @@ static char *termcolor[] = {
   termcol13,
   termcol14,
   termcol15,
+  termcol16,
 };
 static char *colors[][3] = {
        /*               fg           bg           border   */
@@ -85,7 +87,7 @@ static const Rule rules[] = {
 	/* class     instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
-	{ "St",      NULL,     NULL,           0,         0,          1,           0,        -1 },
+	{ "st",      NULL,     NULL,           0,         0,          1,           0,        -1 },
 	{ NULL,      NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
 };
 
@@ -219,8 +221,8 @@ static const Key keys[] = {
 	{ 0, XF86XK_AudioLowerVolume,              spawn,          SHCMD("pactl set-sink-mute @DEFAULT_SINK@ false ; pactl set-sink-volume @DEFAULT_SINK@ -5%; kill -44 $(pidof dwmblocks)") },
 	{ 0, XF86XK_AudioMute,                     spawn,          SHCMD("pactl set-sink-mute @DEFAULT_SINK@ toggle; kill -44 $(pidof dwmblocks)") },
 	{ 0, XF86XK_AudioRaiseVolume,              spawn,          SHCMD("pactl set-sink-mute @DEFAULT_SINK@ false ; pactl set-sink-volume @DEFAULT_SINK@ +5%; kill -44 $(pidof dwmblocks)") },
-	{ 0, XF86XK_MonBrightnessUp,               spawn,          SHCMD("xbacklight -inc 5; kill -44 $(pidof dwmblocks)") },
-	{ 0, XF86XK_MonBrightnessDown,             spawn,          SHCMD("xbacklight -dec 5; kill -44 $(pidof dwmblocks)") },
+	{ 0, XF86XK_MonBrightnessUp,               spawn,          SHCMD("xbacklight -inc 5; kill -45 $(pidof dwmblocks)") },
+	{ 0, XF86XK_MonBrightnessDown,             spawn,          SHCMD("xbacklight -dec 5; kill -45 $(pidof dwmblocks)") },
 	{ 0, XF86XK_ScreenSaver,                   spawn,          SHCMD("slock") },
 	{ 0, XF86XK_WebCam,                        spawn,          SHCMD("sudo rfkill toggle bluetooth") },
 };
