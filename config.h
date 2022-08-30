@@ -11,7 +11,7 @@
 /* See LICENSE file for copyright and license details. */
 
 #define BROWSER "brave"
-#define MAIL "cmaws-mail"
+#define MAIL "claws-mail"
 #define RUNMENU "runmenu.sh"
 #define NUMCOLORS 4
 
