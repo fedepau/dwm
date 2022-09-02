@@ -11,6 +11,7 @@
 /* See LICENSE file for copyright and license details. */
 
 #define BROWSER "brave"
+#define JUPYTER "jupyter-lab"
 #define MAIL "claws-mail"
 #define RUNMENU "runmenu.sh"
 #define NUMCOLORS 4
@@ -153,6 +154,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_s,      togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_w,      spawn,          {.v = (const char*[]){ BROWSER, NULL } } },
+	{ MODKEY,                       XK_y,      spawn,          {.v = (const char*[]){ JUPYTER, NULL } } },
 	{ MODKEY,                       XK_m,      spawn,          {.v = (const char*[]){ MAIL, NULL } } },
 	{ MODKEY,                       XK_Menu,   spawn,          {.v = (const char*[]){ RUNMENU, NULL } } },
 	{ MODKEY,                       XK_F5,     xrdb,           {.v = NULL } },
