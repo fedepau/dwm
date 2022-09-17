@@ -146,6 +146,7 @@ static const char *dmenucmd[] = { "dmenu_run_i", "-m", dmenumon, "-fn", dmenufon
 static const char *termcmd[]  = { "st", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
+static const char *surfbrowser[] = { "tabbed", "surf", "-e", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -154,6 +155,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_s,      togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_w,      spawn,          {.v = (const char*[]){ BROWSER, NULL } } },
+	{ MODKEY,                       XK_r,      spawn,          {.v = surfbrowser } },
 	{ MODKEY,                       XK_y,      spawn,          {.v = (const char*[]){ JUPYTER, NULL } } },
 	{ MODKEY,                       XK_m,      spawn,          {.v = (const char*[]){ MAIL, NULL } } },
 	{ MODKEY,                       XK_Menu,   spawn,          {.v = (const char*[]){ RUNMENU, NULL } } },
