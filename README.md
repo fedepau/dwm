@@ -1,5 +1,7 @@
 # CFP's build of dwm
 
+My build of dwm. For documentation, refer to [the original website](https://dwm.suckless.org/).
+
 ## Applied patches:
 - [accessnthmonitor](https://dwm.suckless.org/patches/accessnthmonitor/)
 - [alwayscenter](https://dwm.suckless.org/patches/alwayscenter/)
