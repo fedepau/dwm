@@ -1167,7 +1167,7 @@ drawbar(Monitor *m)
 				if (!ISVISIBLE(c))
 					continue;
 				if (m->sel == c)
-					scm = SchemeHid;
+					scm = SchemeSel;
 				else if (HIDDEN(c))
 					scm = SchemeHid;
 				else
