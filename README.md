@@ -6,6 +6,7 @@ My build of dwm. For documentation, refer to [the original website](https://dwm.
 - [accessnthmonitor](https://dwm.suckless.org/patches/accessnthmonitor/)
 - [alwayscenter](https://dwm.suckless.org/patches/alwayscenter/)
 - [attachdirection](https://dwm.suckless.org/patches/attachdirection/)
+- [awesomebar](https://dwm.suckless.org/patches/awesomebar/)
 - [cyclelayouts](https://dwm.suckless.org/patches/cyclelayouts/)
 - [focusonnetactive](https://dwm.suckless.org/patches/focusonnetactive/)
 - [fullscreen](https://dwm.suckless.org/patches/fullscreen/)
