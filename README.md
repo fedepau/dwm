@@ -9,6 +9,7 @@ My build of dwm. For documentation, refer to [the original website](https://dwm.
 - [attachdirection](https://dwm.suckless.org/patches/attachdirection/)
 - [awesomebar](https://dwm.suckless.org/patches/awesomebar/)
 - [cyclelayouts](https://dwm.suckless.org/patches/cyclelayouts/)
+- [cursorwarp](https://dwm.suckless.org/patches/cursorwarp/)
 - [focusonnetactive](https://dwm.suckless.org/patches/focusonnetactive/)
 - [fullscreen](https://dwm.suckless.org/patches/fullscreen/)
 - [hide vacant tags](https://dwm.suckless.org/patches/hide_vacant_tags/)
