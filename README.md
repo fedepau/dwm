@@ -4,6 +4,7 @@ My build of dwm. For documentation, refer to [the original website](https://dwm.
 
 ## Applied patches:
 - [accessnthmonitor](https://dwm.suckless.org/patches/accessnthmonitor/)
+- [adjacenttag](https://dwm.suckless.org/patches/adjacenttag/)
 - [alwayscenter](https://dwm.suckless.org/patches/alwayscenter/)
 - [attachdirection](https://dwm.suckless.org/patches/attachdirection/)
 - [awesomebar](https://dwm.suckless.org/patches/awesomebar/)
